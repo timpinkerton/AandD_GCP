@@ -38,6 +38,10 @@ def root():
 
     return render_template('index.html', times=times)
 
+@app.route('/livingRoom')
+def livingRoom():
+    return render_template('livingRoom.html')
+
 
 if __name__ == '__main__':
     # This is used when running locally only. When deploying to Google App
