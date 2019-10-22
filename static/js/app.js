@@ -13,7 +13,7 @@ $(document).ready(function () {
 
     const url = "https://api.nasa.gov/planetary/apod?api_key=QKwS01YI5V3pU5eFj43T574QyeKOu2qxHvh4CI8N";
 
-    const defaultImage = "/images/earth-min.jpg";
+    const defaultImage = "/static/images/earth-min.jpg";
 
     $.ajax({
         url: url,

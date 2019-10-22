@@ -28,20 +28,32 @@ def fetch_times(limit):
     return times
 
 
+# @app.route('/')
+# def root():
+#     # storing the current access time in Datastore
+#     store_time(datetime.datetime.now())
+
+#     # Fetch the most recent 10 access times from Datastore
+#     times = fetch_times(10)
+
+#     return render_template('index.html', times=times)
+
+
 @app.route('/')
-def root():
-    # storing the current access time in Datastore
-    store_time(datetime.datetime.now())
-
-    # Fetch the most recent 10 access times from Datastore
-    times = fetch_times(10)
-
-    return render_template('index.html', times=times)
+def home():
+    return render_template('index.html')
 
 @app.route('/livingRoom')
 def livingRoom():
     return render_template('livingRoom.html')
 
+@app.route('/apod')
+def apod():
+    return render_template('apod.html')
+
+@app.route('/psop')
+def psop():
+    return render_template('psop.html')
 
 if __name__ == '__main__':
     # This is used when running locally only. When deploying to Google App
